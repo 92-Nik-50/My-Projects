@@ -18,11 +18,8 @@ export default {
   justify-content: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   padding: 0.625rem;
-
-
 }
 .app{
   max-width: 31.25rem;
@@ -31,7 +28,6 @@ export default {
   padding: 0.625rem;
   box-shadow: 0px 5px 10px 3px #cccccc;
   margin-top: 3.75rem;
-  font-size: 1.5rem;
 }
 h1{
   letter-spacing: 0.25rem;
