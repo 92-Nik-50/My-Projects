@@ -5,14 +5,16 @@
 </template>
 
 <style lang="scss" module>
+@import "@/assets/styles/styles";
 button {
-  font-size: 0.875rem;
-  background-color: white;
+  cursor: $cursor;
+  font-size: $fontSizeB;
+  background-color: $beckgroundColorB;
   appearance: none;
-  margin: 3px;
+  margin: $paddingS;
 
   &:hover {
-    background: lightgreen;
+    background: $beckgroundColorH;
   }
 
   &:focus {

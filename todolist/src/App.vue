@@ -1,39 +1,39 @@
 <template>
-  <div id="app" class="app">
+  <div id="app" :class="$style.app">
     <h1>TodoList</h1>
-    <Body/>
+    <TodoList />
   </div>
 </template>
 
 <script>
-import Body from './components/Body.vue'
+import TodoList from "@/components/organisms/TodoList.vue";
 export default {
-  components: { Body },
-  name: 'App',
-}
+  components: { TodoList },
+  name: "App",
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" module>
+@import "@/assets/styles/styles";
 #app {
-  justify-content: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  padding: 0.625rem;
+  padding: $padding;
 }
-.app{
-  max-width: 31.25rem;
-  max-height: 33.125rem;
-  margin: 0 auto ;
-  padding: 0.625rem;
-  box-shadow: 0px 5px 10px 3px #cccccc;
-  margin-top: 3.75rem;
-}
-h1{
-  letter-spacing: 0.25rem;
-  text-align: center;
-  color: #cd6829;
-  opacity: 0.6;
-  font-size: 2.5rem;
+.app {
+  max-width: $maxWidth;
+  max-height: $maxHeight;
+  margin: $marginCenter;
+  padding: $padding;
+  box-shadow: $boxShadow;
+  margin-top: $marginTop;
+
+  h1 {
+    letter-spacing: $letterSpacing;
+    text-align: center;
+    color: $colorH1;
+    opacity: $opacity;
+    font-size: $fontSizeH1;
+  }
 }
 </style>
