@@ -1,20 +1,28 @@
 <template>
-  <button :class="$style.button" @click="$emit('click')">
+  <button  :class="$style.button"  @click="$emit('click')">
     <slot />
   </button>
 </template>
 
+<script>
+export default {
+  name: "Button",
+}
+</script>
+
 <style lang="scss" module>
 @import "@/assets/styles/styles";
+@import "@/assets/styles/color";
+
 button {
-  cursor: $cursor;
-  font-size: $fontSizeB;
-  background-color: $beckgroundColorB;
+  cursor: pointer;
+  font-size: 0.875rem;
+  background-color: $white;
   appearance: none;
-  margin: $paddingS;
+  margin: 0.1875rem;
 
   &:hover {
-    background: $beckgroundColorH;
+    background: $green;
   }
 
   &:focus {

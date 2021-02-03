@@ -35,12 +35,14 @@ export default {
 
 <style lang="scss" module>
 @import "@/assets/styles/styles";
+@import "@/assets/styles/color";
+
 .container {
-  margin: $marginCenter;
-  box-shadow: $boxShadow;
-  padding: $padding;
-  max-height: $maxHeightC;
+  margin: 0 auto;
+  box-shadow: $box-shadow;
+  padding: 0.625rem;
+  max-height: 23.125rem;
   overflow-y: scroll;
-  width: $width;
+  width: 95%;
 }
 </style>

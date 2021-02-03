@@ -2,7 +2,7 @@
   <input
     type="checkbox"
     :class="$style.checkbox"
-
+    
   />
 </template>  
 
@@ -12,14 +12,17 @@ export default {};
 
 <style lang="scss" module>
 @import "@/assets/styles/styles";
+@import "@/assets/styles/color";
+
+
 .checkbox {
-  cursor: $cursor;
-  width: $fontSizeP;
-  height: $fontSizeP;
-  margin: $letterSpacing;
+  cursor: pointer;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.25rem;
 }
-input[type="checkbox"]:iscompleted {
+input[type="checkbox"]:checked ~ span  {
   text-decoration: line-through;
-  color: #bbb;
+  color: $gray;
 }
 </style>

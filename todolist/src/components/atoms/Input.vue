@@ -20,10 +20,10 @@ export default {
 <style lang="scss" module>
 @import "@/assets/styles/styles";
 .input {
-  width: $widthI;
-  border-radius: $borderRadius;
-  margin-bottom: $marginBotton;
-  font-size: $fontSizeC;
-  padding: $paddingI;
+  width: 97%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.9375rem;
+  font-size: 1.5625rem;
+  padding: 0.3125rem;
 }
 </style>
