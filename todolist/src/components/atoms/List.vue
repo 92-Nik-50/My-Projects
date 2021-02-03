@@ -38,18 +38,20 @@ export default {
 
 <style lang="scss" module>
 @import "@/assets/styles/styles";
+@import "@/assets/styles/color";
+
 .strocka {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: $marginBotton;
-  padding: $paddingS;
-  font-size: $fontSizeC;
+  margin-bottom: 0.9375rem;
+  padding: 0.1875rem;
+  font-size: 1.5625rem;
   .delete {
-    cursor: $cursor;
-    margin-left: $marginLeft;
+    cursor: pointer;
+    margin-left: 0.875rem;
     &:hover {
-      color: $colorH;
+      color: $red;
     }
     .list {
       display: flex;
@@ -57,14 +59,14 @@ export default {
     }
   }
   .checkBox {
-    cursor: $cursor;
-    width: $fontSizeP;
-    height: $fontSizeP;
-    margin: $letterSpacing;
+    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0.25rem;
   }
 }
 input[type="checkbox"]:checked ~ span {
   text-decoration: line-through;
-  color: #808080;
+  color: $darkGray;
 }
 </style>

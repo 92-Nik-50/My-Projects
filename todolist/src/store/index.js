@@ -1,5 +1,4 @@
 import Vue from 'vue'
-// import { filter } from 'vue/types/umd'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
@@ -7,7 +6,21 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     actions: {},
     state: {
-        todos: []
+        todos: [{
+            checked: false,
+            text: "1",
+            id: 0
+        },
+        {
+            checked: false,
+            text: "2",
+            id: 1
+        },
+        {
+            checked: false,
+            text: "3",
+            id: 2
+        }],
     },
     mutations: {
         add(state, text) {
@@ -31,9 +44,9 @@ export default new Vuex.Store({
                 else { return t }
             })
         },
-        allcompleted(state, allTasckId) {
+        allCompleted(state) {
             state.todos.forEach(h => {
-                h.checked = allTasckId.checked
+                h.checked = !h.checked; 
             })
         }
 
@@ -45,9 +58,11 @@ export default new Vuex.Store({
         total(state) {
             return state.todos.length
         },
-        filterTodos(state){
-            return state.todos.filter(todo=> todo.length > 3) 
-        }
+        allListButton(state){
+            return state.todos;
+        },
+
+
     },
 
     modules: {}

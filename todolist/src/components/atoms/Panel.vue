@@ -6,8 +6,8 @@
           id="id"
           :class="$style.checkBox"
           type="checkbox"
-          @change="allcompleted"
-          :checked="!anyRemaining"
+          @change="allCheck($event.allCompleted)"
+          :checked="checked.h"
         />
         Отметить всё
       </label>
@@ -22,12 +22,9 @@ export default {
   name: "Panel",
   computed: mapGetters(["total"]),
   methods: {
-    ...mapMutations(["allcompleted"]),
+    ...mapMutations(["allCompleted"]),
     allCheck() {
-       this.allcompleted(event.target.checked);
-    },
-    anyRemaining() {
-      return this.total != 0;
+      this.allCompleted(event.target.id );
     },
   },
   data() {
@@ -40,21 +37,28 @@ export default {
 
 <style lang="scss" module>
 @import "@/assets/styles/styles";
+@import "@/assets/styles/color";
+
+
 .panel {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: $paddingS;
-  border-top: $borderTop;
-  font-size: $fontSizeP;
+  padding: 0.1875rem;
+  border-top: $bordet-top;
+  font-size: 1.25rem;
   .lable {
-    cursor: $cursor;
+    cursor: pointer;
   }
   .checkBox {
-    cursor: $cursor;
-    width: $fontSizeP;
-    height: $fontSizeP;
-    margin: $letterSpacing;
+    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0.25rem;
   }
+}
+input[type="checkbox"]:checked ~ span {
+  text-decoration: line-through;
+  color: $darkGray;
 }
 </style>
